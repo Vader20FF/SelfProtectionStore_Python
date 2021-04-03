@@ -1,7 +1,8 @@
 import Client
+from abc import ABC
 
 
-class Entrepreneur(Client):
+class Entrepreneur(Client, metaclass=ABC):
     def __init__(self, nip):
         super().__init__()
         self.__nip = nip

@@ -2,8 +2,8 @@ import Entrepreneur
 
 
 class PrivateEntrepreneur(Entrepreneur):
-    def __init__(self, vat_payer):
-        super().__init__()
+    def __init__(self, vat_payer, nip):
+        super().__init__(nip)
         self.__vat_payer = vat_payer
 
     def get_vat_payer(self):

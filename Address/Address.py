@@ -30,7 +30,7 @@ class Address(ABC):
         return self.__country
 
     # Others
-    def get_client_info(self):
+    def get_address_info(self):
         return f"STREET NAME: {self.get_street_name()}\n" \
                f"STREET NUMBER: {self.get_street_number()}\n" \
                f"APARTMENT NUMBER: {self.get_apartment_number()}\n" \

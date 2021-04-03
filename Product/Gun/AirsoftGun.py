@@ -1,0 +1,21 @@
+import Gun
+from abc import ABC
+
+
+class AirsoftGun(Gun, metaclass=ABC):
+    def __init__(self, mechanism, magazine_capacity):
+        super().__init__(magazine_capacity)
+        self.__mechanism = mechanism
+
+    # Getters
+    def get_mechanism(self):
+        return self.__mechanism
+
+    # Setters
+    def set_mechanism(self, mechanism):
+        self.__mechanism = mechanism
+
+    # Others
+    def get_product_info(self):
+        return super().get_product_info() + \
+               f'MECHANISM: {self.get_material()}'
