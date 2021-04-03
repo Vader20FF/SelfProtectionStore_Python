@@ -62,9 +62,14 @@ class Client:
 
     # Others
     def get_client_info(self):
-        return f"{self.get_first_name()} {self.get_last_name()}\n{self.get_email_address()}\n" \
-               f"{self.get_phone_number()}\n\n{self.get_client_address()}\n\n{self.get_shipping_address()}\n\n" \
-               f"{self.get_is_regular_customer()}\n{self.get_order_price_limit()}"
+        return f"FIRST NAME: {self.get_first_name()}\n" \
+               f"LAST NAME: {self.get_last_name()}\n" \
+               f"E-MAIL: {self.get_email_address()}\n" \
+               f"PHONE NUMBER: {self.get_phone_number()}\n\n" \
+               f"CLIENT ADDRESS:\n{self.get_client_address()}\n\n" \
+               f"SHIPPING ADDRESS:\n{self.get_shipping_address()}\n\n" \
+               f"REGULAR CUSTOMER: {self.get_is_regular_customer()}\n" \
+               f"ORDER PRICE LIMIT: {self.get_order_price_limit()}\n"
 
 
 
