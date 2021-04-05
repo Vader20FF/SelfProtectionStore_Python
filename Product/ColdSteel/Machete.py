@@ -1,4 +1,4 @@
-from ColdSteel import ColdSteel
+from Product.ColdSteel import ColdSteel
 
 
 class Machete(ColdSteel):

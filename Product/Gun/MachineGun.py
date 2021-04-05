@@ -1,4 +1,4 @@
-from RealGun import RealGun
+from Product.Gun.RealGun import RealGun
 
 
 class MachineGun(RealGun):

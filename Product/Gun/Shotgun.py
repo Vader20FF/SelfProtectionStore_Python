@@ -1,4 +1,4 @@
-from AirsoftGun import AirsoftGun
+from Product.Gun.AirsoftGun import AirsoftGun
 
 
 class MachineGun(AirsoftGun):

@@ -61,6 +61,10 @@ class TestClient(TestCase):
         self.client.set_order_price_limit(1000)
         self.assertEqual(self.client.get_order_price_limit(), 1000)
 
+        # print()
+        # print(self.client.get_client_info())
+        # print()
+
     def test_getter_and_setter_company(self):
         self.company.set_first_name("nowe_imie")
         self.assertEqual(self.company.get_first_name(), "nowe_imie")
@@ -88,6 +92,10 @@ class TestClient(TestCase):
 
         self.company.set_nip("nowy_nip")
         self.assertEqual(self.company.get_nip(), "nowy_nip")
+
+        # print()
+        # print(self.company.get_client_info())
+        # print()
 
     def test_getter_and_setter_private_entrepreneur(self):
         self.private_entrepreneur.set_first_name("nowe_imie")
@@ -117,4 +125,8 @@ class TestClient(TestCase):
 
         self.company.set_headquarter_city("nowy_headquarter")
         self.assertEqual(self.company.get_headquarter_city(), "nowy_headquarter")
+
+        # print()
+        # print(self.private_entrepreneur.get_client_info())
+        # print()
 

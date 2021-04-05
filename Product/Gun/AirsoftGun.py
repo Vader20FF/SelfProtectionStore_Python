@@ -1,8 +1,10 @@
-import Gun
+from Product.Gun import Gun
 from abc import ABC
 
 
-class AirsoftGun(Gun, metaclass=ABC):
+class AirsoftGun(Gun):
+    __metaclass__ = ABC
+
     def __init__(self, product_number, manufacturer, product_name, price, magazine_capacity, mechanism):
         super().__init__(product_number, manufacturer, product_name, price, magazine_capacity)
         self.__mechanism = mechanism

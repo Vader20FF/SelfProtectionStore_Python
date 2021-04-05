@@ -69,8 +69,8 @@ class Client(ABC):
                f"LAST NAME: {self.get_last_name()}\n" \
                f"E-MAIL: {self.get_email_address()}\n" \
                f"PHONE NUMBER: {self.get_phone_number()}\n\n" \
-               f"CLIENT ADDRESS:\n{self.get_client_address()}\n\n" \
-               f"SHIPPING ADDRESS:\n{self.get_shipping_address()}\n\n" \
+               f"CLIENT ADDRESS:\n{self.get_client_address().get_address_info()}\n" \
+               f"SHIPPING ADDRESS:\n{self.get_shipping_address().get_address_info()}\n" \
                f"REGULAR CUSTOMER: {self.get_is_regular_customer()}\n" \
                f"ORDER PRICE LIMIT: {self.get_order_price_limit()}\n"
 

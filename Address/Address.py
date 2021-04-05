@@ -34,6 +34,6 @@ class Address(ABC):
         return f"STREET NAME: {self.get_street_name()}\n" \
                f"STREET NUMBER: {self.get_street_number()}\n" \
                f"APARTMENT NUMBER: {self.get_apartment_number()}\n" \
-               f"CITY NAME: {self.get_city_name()}\n\n" \
-               f"POSTAL CODE:\n{self.get_postal_code()}\n\n" \
-               f"COUNTRY:\n{self.get_country()}\n\n"
+               f"CITY NAME: {self.get_city_name()}\n" \
+               f"POSTAL CODE: {self.get_postal_code()}\n" \
+               f"COUNTRY: {self.get_country()}\n"
