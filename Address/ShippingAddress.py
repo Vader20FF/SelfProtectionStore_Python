@@ -1,4 +1,4 @@
-from Address import Address
+from Address.Address import Address
 
 
 class ShippingAddress(Address):

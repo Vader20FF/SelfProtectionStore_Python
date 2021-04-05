@@ -1,4 +1,7 @@
-class Client:
+from abc import ABC
+
+
+class Client(ABC):
     def __init__(self, first_name, last_name, email_address, phone_number, client_address, shipping_address,
                  is_regular_customer, order_price_limit):
         self.__first_name = first_name

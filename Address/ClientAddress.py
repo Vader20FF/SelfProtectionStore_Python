@@ -1,4 +1,4 @@
-from Address import Address
+from Address.Address import Address
 
 
 class ClientAddress(Address):
@@ -7,19 +7,19 @@ class ClientAddress(Address):
 
     # Setters
     def set_street_name(self, street_name):
-        super().__street_name = street_name
+        self.street_name = street_name
 
     def set_street_number(self, street_number):
-        super().__street_number = street_number
+        self.street_number = street_number
 
     def set_apartment_number(self, apartment_number):
-        super().__apartment_number = apartment_number
+        self.apartment_number = apartment_number
 
     def set_city_name(self, city_name):
-        super().__city_name = city_name
+        self.city_name = city_name
 
     def set_postal_code(self, postal_code):
-        super().__postal_code = postal_code
+        self.postal_code = postal_code
 
     def set_country(self, country):
-        super().__country = country
+        self.country = country

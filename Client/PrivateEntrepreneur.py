@@ -1,4 +1,4 @@
-from Entrepreneur import Entrepreneur
+from Client.Entrepreneur import Entrepreneur
 
 
 class PrivateEntrepreneur(Entrepreneur):
