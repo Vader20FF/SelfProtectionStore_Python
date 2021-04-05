@@ -8,8 +8,8 @@ class MyTestCase(unittest.TestCase):
     shipping_address = ShippingAddress("Ulica2", '22', '23', "Miasto2", "Kod pocztowy 2", "Anglia")
 
     def getter_and_setter_tests_client_address(self):
-        self.client_address.set_street_name("Nowa_ulica")
-        self.assertEqual(self.client_address.get_street_name(), "Nowa_ulica")
+        self.client_address.set_street_name("Nowa_ulica1")
+        self.assertEqual(self.client_address.get_street_name(), "Nowa_ulica1")
 
         self.client_address.set_street_number("22")
         self.assertEqual(self.client_address.get_street_name(), "22")
