@@ -46,7 +46,7 @@ class Order:
         self.__status = status
 
     # Others
-    def get_client_info(self):
+    def get_order_info(self):
         return f"ORDER ID: {self.get_order_id()}\n" \
                f"ORDER DATE: {self.get_order_date()}\n" \
                f"ESTIMATED DELIVERY DATE: {self.get_estimated_delivery_date()}\n" \
