@@ -1,9 +1,10 @@
-import AirsoftGun
+from AirsoftGun import AirsoftGun
 
 
 class MachineGun(AirsoftGun):
-    def __init__(self, initial_bullet_velocity, mechanism, magazine_capacity):
-        super().__init__(mechanism, magazine_capacity)
+    def __init__(self, product_number, manufacturer, product_name, price, magazine_capacity, mechanism,
+                 initial_bullet_velocity):
+        super().__init__(product_number, manufacturer, product_name, price, magazine_capacity, mechanism)
         self.__initial_bullet_velocity = initial_bullet_velocity
 
     # Getters

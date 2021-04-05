@@ -3,8 +3,8 @@ from abc import ABC
 
 
 class AirsoftGun(Gun, metaclass=ABC):
-    def __init__(self, mechanism, magazine_capacity):
-        super().__init__(magazine_capacity)
+    def __init__(self, product_number, manufacturer, product_name, price, magazine_capacity, mechanism):
+        super().__init__(product_number, manufacturer, product_name, price, magazine_capacity)
         self.__mechanism = mechanism
 
     # Getters

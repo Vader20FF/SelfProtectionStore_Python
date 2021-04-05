@@ -1,9 +1,9 @@
-import ColdSteel
+from ColdSteel import ColdSteel
 
 
 class Machete(ColdSteel):
-    def __init__(self, color, material):
-        super().__init__(material)
+    def __init__(self, product_number, manufacturer, product_name, price, material, color):
+        super().__init__(product_number, manufacturer, product_name, price, material)
         self.__color = color
 
     # Getters

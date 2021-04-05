@@ -1,10 +1,10 @@
-import Product
+from Product import Product
 from abc import ABC
 
 
 class Gun(Product, metaclass=ABC):
-    def __init__(self, magazine_capacity):
-        super().__init__()
+    def __init__(self, product_number, manufacturer, product_name, price, magazine_capacity):
+        super().__init__(product_number, manufacturer, product_name, price)
         self.__magazine_capacity = magazine_capacity
 
     # Getters

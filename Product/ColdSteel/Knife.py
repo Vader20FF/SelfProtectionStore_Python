@@ -1,9 +1,9 @@
-import ColdSteel
+from ColdSteel import ColdSteel
 
 
 class Knife(ColdSteel):
-    def __init__(self, weight, material):
-        super().__init__(material)
+    def __init__(self, product_number, manufacturer, product_name, price, material, weight):
+        super().__init__(product_number, manufacturer, product_name, price, material)
         self.__weight = weight
 
     # Getters

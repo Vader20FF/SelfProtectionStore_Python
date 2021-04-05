@@ -1,9 +1,9 @@
-import RealGun
+from RealGun import RealGun
 
 
 class PelletGun(RealGun):
-    def __init__(self, fire_rate, caliber, magazine_capacity):
-        super().__init__(caliber, magazine_capacity)
+    def __init__(self, product_number, manufacturer, product_name, price, magazine_capacity, caliber, fire_rate):
+        super().__init__(product_number, manufacturer, product_name, price, magazine_capacity, caliber)
         self.__fire_rate = fire_rate
 
     # Getters

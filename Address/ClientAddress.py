@@ -1,9 +1,9 @@
-import Address
+from Address import Address
 
 
 class ClientAddress(Address):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, street_name, street_number, apartment_number, city_name, postal_code, set_country):
+        super().__init__(street_name, street_number, apartment_number, city_name, postal_code, set_country)
 
     # Setters
     def set_street_name(self, street_name):

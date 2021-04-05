@@ -1,10 +1,10 @@
-import Gun
+from Gun import Gun
 from abc import ABC
 
 
 class RealGun(Gun, metaclass=ABC):
-    def __init__(self, caliber, magazine_capacity):
-        super().__init__(magazine_capacity)
+    def __init__(self, product_number, manufacturer, product_name, price, magazine_capacity, caliber):
+        super().__init__(product_number, manufacturer, product_name, price, magazine_capacity)
         self.__caliber = caliber
 
     # Getters

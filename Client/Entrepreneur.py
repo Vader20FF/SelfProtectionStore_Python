@@ -1,10 +1,12 @@
-import Client
+from Client import Client
 from abc import ABC
 
 
 class Entrepreneur(Client, metaclass=ABC):
-    def __init__(self, nip):
-        super().__init__()
+    def __init__(self, first_name, last_name, email_address, phone_number, client_address, shipping_address,
+                 is_regular_customer, order_price_limit, nip):
+        super().__init__(first_name, last_name, email_address, phone_number, client_address, shipping_address,
+                         is_regular_customer, order_price_limit)
         self.__nip = nip
 
     def get_nip(self):
@@ -16,5 +18,3 @@ class Entrepreneur(Client, metaclass=ABC):
     def get_client_info(self):
         return super().get_client_info() + \
                f'NIP: {self.get_nip()}\n'
-
-

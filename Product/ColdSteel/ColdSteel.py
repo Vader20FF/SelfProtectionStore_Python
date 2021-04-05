@@ -1,10 +1,10 @@
-import Product
+from Product import Product
 from abc import ABC
 
 
 class ColdSteel(Product, metaclass=ABC):
-    def __init__(self, material):
-        super().__init__()
+    def __init__(self, product_number, manufacturer, product_name, price, material):
+        super().__init__(product_number, manufacturer, product_name, price)
         self.__material = material
 
     # Getters
