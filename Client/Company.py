@@ -3,9 +3,9 @@ from Client.Entrepreneur import Entrepreneur
 
 class Company(Entrepreneur):
     def __init__(self, first_name, last_name, email_address, phone_number, client_address, shipping_address,
-                 is_regular_customer, order_price_limit, nip, headquarter_city):
+                 is_regular_customer, nip, headquarter_city):
         super().__init__(first_name, last_name, email_address, phone_number, client_address, shipping_address,
-                         is_regular_customer, order_price_limit, nip)
+                         is_regular_customer, nip)
         self.__headquarter_city = headquarter_city
 
     def get_headquarter_city(self):

@@ -3,7 +3,7 @@ from abc import ABC
 
 class Client(ABC):
     def __init__(self, first_name, last_name, email_address, phone_number, client_address, shipping_address,
-                 is_regular_customer, order_price_limit):
+                 is_regular_customer=False):
         self.__first_name = first_name
         self.__last_name = last_name
         self.__email_address = email_address
@@ -11,7 +11,6 @@ class Client(ABC):
         self.__client_address = client_address
         self.__shipping_address = shipping_address
         self.__is_regular_customer = is_regular_customer
-        self.__order_price_limit = order_price_limit
 
     # Getters
     def get_first_name(self):
@@ -35,9 +34,6 @@ class Client(ABC):
     def get_is_regular_customer(self):
         return self.__is_regular_customer
 
-    def get_order_price_limit(self):
-        return self.__order_price_limit
-
     # Setters
     def set_first_name(self, first_name):
         self.__first_name = first_name
@@ -60,9 +56,6 @@ class Client(ABC):
     def set_is_regular_customer(self, is_regular_customer):
         self.__is_regular_customer = is_regular_customer
 
-    def set_order_price_limit(self, order_price_limit):
-        self.__order_price_limit = order_price_limit
-
     # Others
     def get_client_info(self):
         return f"FIRST NAME: {self.get_first_name()}\n" \
@@ -72,7 +65,6 @@ class Client(ABC):
                f"CLIENT ADDRESS:\n{self.get_client_address().get_address_info()}\n" \
                f"SHIPPING ADDRESS:\n{self.get_shipping_address().get_address_info()}\n" \
                f"REGULAR CUSTOMER: {self.get_is_regular_customer()}\n" \
-               f"ORDER PRICE LIMIT: {self.get_order_price_limit()}\n"
 
 
 
