@@ -1,4 +1,4 @@
-from Product.ColdSteel import ColdSteel
+from Product.ColdSteel.ColdSteel import ColdSteel
 
 
 class Knife(ColdSteel):
@@ -15,6 +15,6 @@ class Knife(ColdSteel):
         self.__weight = weight
 
     # Others
-    def get_address_info(self):
+    def get_product_info(self):
         return super().get_product_info() + \
-               f'WEIGHT: {self.get_weight()}'
+               f'WEIGHT: {self.get_weight()}\n'

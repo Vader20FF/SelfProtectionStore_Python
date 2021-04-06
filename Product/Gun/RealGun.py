@@ -1,4 +1,4 @@
-from Product.Gun import Gun
+from Product.Gun.Gun import Gun
 from abc import ABC
 
 
@@ -20,4 +20,4 @@ class RealGun(Gun):
     # Others
     def get_product_info(self):
         return super().get_product_info() + \
-               f'CALIBER: {self.get_caliber()}'
+               f'CALIBER: {self.get_caliber()}\n'

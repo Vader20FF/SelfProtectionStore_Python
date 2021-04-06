@@ -1,4 +1,4 @@
-from Product.ColdSteel import ColdSteel
+from Product.ColdSteel.ColdSteel import ColdSteel
 
 
 class Sword(ColdSteel):
@@ -15,6 +15,6 @@ class Sword(ColdSteel):
         self.__length = length
 
     # Others
-    def get_address_info(self):
+    def get_product_info(self):
         return super().get_product_info() + \
-               f'LENGTH: {self.get_length()}'
+               f'LENGTH: {self.get_length()}\n'

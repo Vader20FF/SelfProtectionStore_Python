@@ -17,4 +17,4 @@ class MachineGun(RealGun):
     # Others
     def get_product_info(self):
         return super().get_product_info() + \
-               f'FIRE MODE: {self.get_fire_mode()}'
+               f'FIRE MODE: {self.get_fire_mode()}\n'

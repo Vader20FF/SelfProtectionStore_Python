@@ -1,7 +1,7 @@
 from Product.Gun.AirsoftGun import AirsoftGun
 
 
-class MachineGun(AirsoftGun):
+class Shotgun(AirsoftGun):
     def __init__(self, product_number, manufacturer, product_name, price, magazine_capacity, mechanism,
                  initial_bullet_velocity):
         super().__init__(product_number, manufacturer, product_name, price, magazine_capacity, mechanism)
@@ -18,4 +18,4 @@ class MachineGun(AirsoftGun):
     # Others
     def get_product_info(self):
         return super().get_product_info() + \
-               f'INITIAL BULLET VELOCITY: {self.get_initial_bullet_velocity()}'
+               f'INITIAL BULLET VELOCITY: {self.get_initial_bullet_velocity()}\n'

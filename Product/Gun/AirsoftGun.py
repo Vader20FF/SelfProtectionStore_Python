@@ -1,4 +1,4 @@
-from Product.Gun import Gun
+from Product.Gun.Gun import Gun
 from abc import ABC
 
 
@@ -20,4 +20,4 @@ class AirsoftGun(Gun):
     # Others
     def get_product_info(self):
         return super().get_product_info() + \
-               f'MECHANISM: {self.get_material()}'
+               f'MECHANISM: {self.get_mechanism()}\n'

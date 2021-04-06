@@ -39,4 +39,4 @@ class Product(ABC):
         return f"PRODUCT NUMBER: {self.get_product_number()}\n" \
                f"MANUFACTURER: {self.get_manufacturer()}\n" \
                f"PRODUCT NAME: {self.get_product_name()}\n" \
-               f"PRICE: {self.get_price()}\n\n"
+               f"PRICE: {self.get_price()}\n"

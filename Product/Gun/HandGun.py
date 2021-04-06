@@ -17,4 +17,4 @@ class HandGun(RealGun):
     # Others
     def get_product_info(self):
         return super().get_product_info() + \
-               f'COLOR: {self.get_color()}'
+               f'COLOR: {self.get_color()}\n'

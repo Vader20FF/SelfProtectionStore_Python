@@ -1,4 +1,4 @@
-from Product.ColdSteel import ColdSteel
+from Product.ColdSteel.ColdSteel import ColdSteel
 
 
 class Machete(ColdSteel):
@@ -15,6 +15,6 @@ class Machete(ColdSteel):
         self.__color = color
 
     # Others
-    def get_address_info(self):
+    def get_product_info(self):
         return super().get_product_info() + \
-               f'COLOR: {self.get_color()}'
+               f'COLOR: {self.get_color()}\n'

@@ -18,6 +18,6 @@ class ColdSteel(Product):
         self.__material = material
 
     # Others
-    def get_address_info(self):
+    def get_product_info(self):
         return super().get_product_info() + \
-               f'MATERIAL: {self.get_material()}'
+               f'MATERIAL: {self.get_material()}\n'
