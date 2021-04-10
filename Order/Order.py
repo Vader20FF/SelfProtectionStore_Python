@@ -50,6 +50,7 @@ class Order:
         return f"ORDER ID: {self.get_order_id()}\n" \
                f"ORDER DATE: {self.get_order_date()}\n" \
                f"ESTIMATED DELIVERY DATE: {self.get_estimated_delivery_date()}\n\n" \
+               f"{self.get_client().get_client_info()}\n\n" \
                f"{self.get_shopping_cart().get_shopping_cart_info()}\n\n" \
                f"SHIPPING METHOD: {self.get_shipping_method()}\n" \
                f"TOTAL COST: {self.get_total_cost()}\n" \

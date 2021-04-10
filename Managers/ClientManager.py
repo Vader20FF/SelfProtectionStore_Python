@@ -9,21 +9,10 @@ class ClientManager:
     def get_client_list(self):
         return self.__clients_list
 
-    def register_client(self, first_name, last_name, email_address, phone_number,
-                        client_street_name, client_street_number, client_apartment_number, client_city_name,
-                        client_postal_code, client_country,
-                        shipping_street_name, shipping_street_number, shipping_apartment_number, shipping_city_name,
-                        shipping_postal_code, shipping_country,
-                        is_regular_customer):
-        client_address = ClientAddress(client_street_name, client_street_number, client_apartment_number,
-                                       client_city_name, client_postal_code, client_country)
-        shipping_address = ShippingAddress(shipping_street_name, shipping_street_number, shipping_apartment_number,
-                                           shipping_city_name, shipping_postal_code, shipping_country)
-        new_client = Client(first_name, last_name, email_address, phone_number, client_address, shipping_address,
-                            is_regular_customer)
+    def register_client(self, new_client):
         for client in self.get_client_list():
-            if client.get_phone_number() == phone_number:
-                print("\nUser of such phone number already exists!\n")
+            if client.get_phone_number() == new_client.get_phone_number():
+                # print("\Client of given phone number already exists!\n")
                 return False
         self.get_client_list().append(new_client)
         return True
@@ -31,9 +20,9 @@ class ClientManager:
     def unregister_client(self, client):
         self.get_client_list().remove(client)
 
-    def client_exists(self, search_parameter):
+    def client_exists(self, client_phone_number):
         for client in self.get_client_list():
-            if search_parameter in client.get_client_info():
+            if client_phone_number == client.get_phone_number():
                 return True
         return False
 

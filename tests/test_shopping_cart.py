@@ -41,9 +41,9 @@ class TestShoppingCart(TestCase):
         self.assertEqual(self.shoppingCart.get_shopping_cart_products_list(),
                          [self.knife, self.machete, self.pelletgun])
 
-        print()
-        print(self.shoppingCart.get_shopping_cart_info())
-        print()
+        # print()
+        # print(self.shoppingCart.get_shopping_cart_info())
+        # print()
 
 
 

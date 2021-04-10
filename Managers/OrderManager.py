@@ -4,14 +4,16 @@ class OrderManager:
     def get_orders_list(self):
         return self.__orders_list
 
-    def register_order(self, order):
-        self.get_orders_list().append(order)
+    def register_order(self, new_order):
+        for order in self.get_orders_list():
+            if order.get_order_id() == new_order.get_order_id():
+                # print("\Order of given ID already exists!\n")
+                return False
+        self.get_orders_list().append(new_order)
+        return True
 
     def cancel_order(self, order):
         self.get_orders_list().remove(order)
-
-    def change_client_type(self, client, new_client_type):
-        client.set_client_type(new_client_type)
 
     def get_all_client_orders(self, client):
         results = []
@@ -20,18 +22,11 @@ class OrderManager:
                 results.append(order)
         return results
 
-    def order_exists(self, search_parameter):
+    def order_exists(self, order_id):
         for order in self.get_orders_list():
-            if search_parameter in order.get_order_info():
+            if order_id == order.get_order_id():
                 return True
         return False
-
-    def find_all_orders(self, search_parameter):
-        results = []
-        for order in self.get_orders_list():
-            if search_parameter in order.get_order_info():
-                results.append(order)
-        return results
 
     def find_order(self, search_parameter):
         for order in self.get_orders_list():

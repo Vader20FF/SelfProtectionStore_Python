@@ -15,7 +15,7 @@ class TestOrder(TestCase):
         self.client_address = ClientAddress("Ulica", "18", "11", "Miasto", "Kod pocztowy", "Polska")
         self.shipping_address = ShippingAddress("Ulica2", '22', '23', "Miasto2", "Kod pocztowy 2", "Anglia")
         self.client = Client("client_imie", "client_nazwisko", "client_email", "client_phone",
-                             self.client_address, self.shipping_address, False, 400)
+                             self.client_address, self.shipping_address, False)
         self.knife = Knife(23, "knife_manufacturer", "knife_name", 500, "knife_material", 20)
         self.machete = Machete(23, "machete_manufacturer", "machete_name", 500, "machete_material", "machete_color")
         self.pelletgun = PelletGun(23, "pelletgun_manufacturer", "pelletgun_name", 500, 30, ".30",
@@ -43,6 +43,6 @@ class TestOrder(TestCase):
 
         self.assertEqual(self.order.get_total_cost(), 1500)
 
-        print()
-        print(self.order.get_order_info())
-        print()
+        # print()
+        # print(self.order.get_order_info())
+        # print()
